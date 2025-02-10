@@ -35,7 +35,7 @@ $data = mysqli_fetch_array($query);
                     <td>
                         Harga Satuan : <?php echo $produk['harga']; ?><br>
                         Jumlah : <?php echo $produk['jumlah_produk']; ?><br>
-                        Sub Total : <?php echo $produk['sub_total']; ?><br>
+                        Sub Total : <?php echo $produk['subtotal']; ?><br>
                     </td>
                 </tr>
             <?php

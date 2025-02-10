@@ -2,9 +2,9 @@
     if(isset($_POST['nama_pelanggan'])) {
         $nama = $_POST['nama_pelanggan'];
         $alamat = $_POST['alamat'];
-        $no_telepon = $_POST['no_telepon'];
+        $nomor_hp = $_POST['nomor_hp'];
 
-        $query = mysqli_query($koneksi, "INSERT INTO pelanggan(nama_pelanggan,alamat,no_telepon) values('$nama','$alamat','$no_telepon')");
+        $query = mysqli_query($koneksi, "INSERT INTO pelanggan(nama_pelanggan,alamat,nomor_hp) values('$nama','$alamat','$nomor_hp')");
         if($query) {
             echo '<script>alert("Tambah data berhasil")</script>';
         }else{
@@ -43,7 +43,7 @@
             <tr>
                 <td>No. Telepon</td>
                 <td>:</td>
-                <td><input class="form-control" type="number" step="0" name="no_telepon"</td>
+                <td><input class="form-control" type="number" step="0" name="nomor_hp"</td>
             </tr>
             <tr>
                 <td></td>

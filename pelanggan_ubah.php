@@ -4,9 +4,9 @@
     if(isset($_POST['nama_pelanggan'])) {
         $nama = $_POST['nama_pelanggan'];
         $alamat = $_POST['alamat'];
-        $no_telepon = $_POST['no_telepon'];
+        $nomor_hp = $_POST['nomor_hp'];
 
-        $query = mysqli_query($koneksi, "UPDATE pelanggan SET nama_pelanggan='$nama', alamat='$alamat', no_telepon='$no_telepon' WHERE id_pelanggan=$id ");
+        $query = mysqli_query($koneksi, "UPDATE pelanggan SET nama_pelanggan='$nama', alamat='$alamat', nomor_hp='$nomor_hp' WHERE id_pelanggan=$id ");
         if($query) {
             echo '<script>alert("Ubah data berhasil")</script>';
         }else{
@@ -48,7 +48,7 @@
             <tr>
                 <td>No. Telepon</td>
                 <td>:</td>
-                <td><input class="form-control" type="number" step="0" value="<?php echo $data['no_telepon']; ?>" name="no_telepon"</td>
+                <td><input class="form-control" type="number" step="0" value="<?php echo $data['nomor_hp']; ?>" name="nomor_hp"</td>
             </tr>
             <tr>
                 <td></td>

@@ -2,9 +2,9 @@
     if(isset($_POST['nama_produk'])) {
         $nama = $_POST['nama_produk'];
         $harga = $_POST['harga'];
-        $stock = $_POST['stock'];
+        $stok = $_POST['stok'];
 
-        $query = mysqli_query($koneksi, "INSERT INTO produk(nama_produk,harga,stock) values('$nama','$harga','$stock')");
+        $query = mysqli_query($koneksi, "INSERT INTO produk(nama_produk,harga,stok) values('$nama','$harga','$stok')");
         if($query) {
             echo '<script>alert("Tambah data berhasil")</script>';
         }else{
@@ -39,9 +39,9 @@
                 <td><input class="form-control" type="number" step="0" name="harga"</td>
             </tr>
             <tr>
-                <td>Stock</td>
+                <td>Stok</td>
                 <td>:</td>
-                <td><input class="form-control" type="number" step="0" name="stock"</td>
+                <td><input class="form-control" type="number" step="0" name="stok"</td>
             </tr>
             <tr>
                 <td></td>

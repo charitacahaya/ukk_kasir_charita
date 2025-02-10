@@ -19,9 +19,9 @@
             if($val > 0) {
                 $sub    = $val * $pr['harga'];
                 $total += $sub;
-                $query = mysqli_query($koneksi, "INSERT INTO detail_penjualan(id_penjualan,id_produk,jumlah_produk,sub_total) values('$id_penjualan','$key','$val','$sub')");
+                $query = mysqli_query($koneksi, "INSERT INTO detail_penjualan(id_penjualan,id_produk,jumlah_produk,subtotal) values('$id_penjualan','$key','$val','$sub')");
                 
-                $updateProduk = mysqli_query($koneksi, "UPDATE produk set stock=stock-$val WHERE id_produk=$key");
+                $updateProduk = mysqli_query($koneksi, "UPDATE produk set stok=stok-$val WHERE id_produk=$key");
             }
         
         }
@@ -74,11 +74,11 @@
                 while($produk = mysqli_fetch_array($pro)) {
             ?>
             <tr>
-                <td><?php echo $produk['nama_produk'] . ' (Stock : '.$produk['stock'].')'; ?></td>
+                <td><?php echo $produk['nama_produk'] . ' (Stok : '.$produk['stok'].')'; ?></td>
                 <td>:</td>
                 <td>
                     <input class="form-control" type="number" 
-                    step="0" value="0" max="<?php echo $produk['stock']; ?>" name="produk[<?php echo $produk['id_produk']; ?>]">
+                    step="0" value="0" max="<?php echo $produk['stok']; ?>" name="produk[<?php echo $produk['id_produk']; ?>]">
                 </td>
             </tr>
             <?php

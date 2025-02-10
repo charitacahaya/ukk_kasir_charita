@@ -31,7 +31,29 @@ if (isset($_POST['username'])) {
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-primary">
+<body style="background-color: pink;">
+        <style>
+            .card {
+                background-color: #ffccdd !important; /* Pink lembut */
+                border: 2px solid #ff6699; /* Border pink */
+            }
+
+            .card-header {
+                background-color: #ff6699 !important; /* Header pink */
+                color: white !important;
+            }
+
+            .btn-primary {
+                background-color: #ff6699 !important; /* Warna tombol pink */
+                border-color: #ff6699 !important;
+            }
+
+            .btn-primary:hover {
+                background-color: #ff3366 !important; /* Warna lebih gelap saat hover */
+                border-color: #ff3366 !important;
+            }
+        </style>
+
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
