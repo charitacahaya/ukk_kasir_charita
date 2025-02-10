@@ -29,6 +29,11 @@ if (!isset($_SESSION['user'])) {
         .nav-link {
             font-family: 'Poppins', sans-serif !important;
         }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
     </style>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -94,7 +99,7 @@ if (!isset($_SESSION['user'])) {
                     </div>
                 </div>
                 <div class="sb-sidenav-footer" style="color: white;">
-                    <div class="small">Logged in as:</div>
+                    <div class="small bold-text">Logged in as:</div>
                     <?php echo $_SESSION['user']['nama']; ?>
                 </div>
 

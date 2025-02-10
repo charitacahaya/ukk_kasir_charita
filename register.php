@@ -53,6 +53,14 @@ if (isset($_POST['username'])) {
                 background-color: #ff3366 !important; /* Warna lebih gelap saat hover */
                 border-color: #ff3366 !important;
             }
+
+            .logo {
+                width: 150px;  /* Atur lebar */
+                height: auto;   /* Menjaga aspek rasio */
+                display: block;
+                margin: 0 auto; /* Pusatkan gambar */
+            }
+
         </style>
 
     <div id="layoutAuthentication">
@@ -63,6 +71,7 @@ if (isset($_POST['username'])) {
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header text-center">
+                                    <img src="assets/img/cashier.png" alt="Logo Aplikasi" class="logo">
                                     <h3 class="font-weight-light my-4">Register Aplikasi Kasir</h3>
                                 </div>
                                 <div class="card-body">

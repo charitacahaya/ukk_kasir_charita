@@ -15,6 +15,7 @@
         <table class="table table-bordered text-center" style="background-color: #ffe6f2; color: black;">
             <thead class="text-white" style="background-color: #ff66b2;">
                 <tr>
+                    <th>No</th> <!-- Tambahkan kolom No -->
                     <th>Nama Produk</th>
                     <th>Harga</th>
                     <th>Stok</th>
@@ -24,9 +25,11 @@
             <tbody>
                 <?php
                 $query = mysqli_query($koneksi, "SELECT * FROM produk");
+                $no = 1; // Inisialisasi nomor urut
                 while ($data = mysqli_fetch_array($query)) {
                 ?>
                     <tr>
+                        <td><?php echo $no++; ?></td> <!-- Menampilkan nomor urut -->
                         <td><?php echo $data['nama_produk']; ?></td>
                         <td>Rp <?php echo number_format($data['harga'], 0, ',', '.'); ?></td>
                         <td><?php echo $data['stok']; ?></td>
